@@ -1,8 +1,9 @@
 import '../styles/globals.css'
 
 import Sidebar from '../components/Sidebar'
-// import SupabaseProvider from '../providers/SupabaseProvider'
+
 import UserProvider from '../providers/UserProvider'
+import SupabaseProvider from '../providers/SupabaseProvider'
 // import ModalProvider from '../providers/ModalProvider'
 // import ToasterProvider from '../providers/ToasterProvider'
 // import getContentsByUserId from '../actions/getContentsByUserId'
@@ -32,14 +33,14 @@ export default async function RootLayout({
     <html lang="en">
       <body>
         {/* <ToasterProvider /> */}
-        {/* <SupabaseProvider> */}
-        <UserProvider>
-          {/* <ModalProvider products={products} /> */}
-          <Sidebar>
-            {children}
-          </Sidebar>
-        </UserProvider>
-        {/* </SupabaseProvider>  */}
+        <SupabaseProvider>
+          <UserProvider>
+            {/* <ModalProvider products={products} /> */}
+            <Sidebar>
+              {children}
+            </Sidebar>
+          </UserProvider>
+        </SupabaseProvider>
       </body>
     </html>
   )

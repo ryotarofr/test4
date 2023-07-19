@@ -10,14 +10,14 @@ import Sidebar from '../components/Sidebar'
 
 
 
-export const metadata = {
-  title: 'Spotify Clone is change for me',
-  description: 'Welcome to Learn',
-}
+// export const metadata = {
+//   title: 'Spotify Clone is change for me',
+//   description: 'Welcome to Learn',
+// }
 
 // export const dynamic = 'force-dynamic'
-export const dynamic = 'force-static'
-export const revalidate = 60
+// export const dynamic = 'force-static'
+// export const revalidate = 60
 
 
 export default async function RootLayout({

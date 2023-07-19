@@ -2,7 +2,7 @@ import '../styles/globals.css'
 
 import Sidebar from '../components/Sidebar'
 // import SupabaseProvider from '../providers/SupabaseProvider'
-// import UserProvider from '../providers/UserProvider'
+import UserProvider from '../providers/UserProvider'
 // import ModalProvider from '../providers/ModalProvider'
 // import ToasterProvider from '../providers/ToasterProvider'
 // import getContentsByUserId from '../actions/getContentsByUserId'
@@ -19,6 +19,7 @@ import Sidebar from '../components/Sidebar'
 // export const dynamic = 'force-static'
 // export const revalidate = 60
 
+// export const revalidate = 0
 
 export default async function RootLayout({
   children,
@@ -30,15 +31,15 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <ToasterProvider />
-        <SupabaseProvider>
-          <UserProvider>
-            <ModalProvider products={products} /> */}
-        <Sidebar>
-          {children}
-        </Sidebar>
-        {/* </UserProvider>
-        </SupabaseProvider> */}
+        {/* <ToasterProvider /> */}
+        {/* <SupabaseProvider> */}
+        <UserProvider>
+          {/* <ModalProvider products={products} /> */}
+          <Sidebar>
+            {children}
+          </Sidebar>
+        </UserProvider>
+        {/* </SupabaseProvider>  */}
       </body>
     </html>
   )

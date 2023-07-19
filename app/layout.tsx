@@ -4,10 +4,11 @@ import Sidebar from '../components/Sidebar'
 
 import UserProvider from '../providers/UserProvider'
 import SupabaseProvider from '../providers/SupabaseProvider'
-// import ModalProvider from '../providers/ModalProvider'
-// import ToasterProvider from '../providers/ToasterProvider'
+import ToasterProvider from '../providers/ToasterProvider'
+import ModalProvider from '../providers/ModalProvider'
+import getActiveProductsWithPrices from '../actions/getActiveProductsWithPrices'
+
 // import getContentsByUserId from '../actions/getContentsByUserId'
-// import getActiveProductsWithPrices from '../actions/getActiveProductsWithPrices'
 
 
 
@@ -27,15 +28,15 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // const products = await getActiveProductsWithPrices()
+  const products = await getActiveProductsWithPrices()
 
   return (
     <html lang="en">
       <body>
-        {/* <ToasterProvider /> */}
+        <ToasterProvider />
         <SupabaseProvider>
           <UserProvider>
-            {/* <ModalProvider products={products} /> */}
+            <ModalProvider products={products} />
             <Sidebar>
               {children}
             </Sidebar>

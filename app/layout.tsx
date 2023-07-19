@@ -21,7 +21,7 @@ import getActiveProductsWithPrices from '../actions/getActiveProductsWithPrices'
 // export const dynamic = 'force-static'
 // export const revalidate = 60
 
-export const revalidate = 0
+// export const revalidate = 0
 
 export default async function RootLayout({
   children,
@@ -34,14 +34,14 @@ export default async function RootLayout({
     <html lang="en">
       <body>
         <ToasterProvider />
-        <SupabaseProvider>
-          <UserProvider>
-            <ModalProvider products={products} />
-            <Sidebar>
-              {children}
-            </Sidebar>
-          </UserProvider>
-        </SupabaseProvider>
+        {/* <SupabaseProvider> */}
+        <UserProvider>
+          <ModalProvider products={products} />
+          <Sidebar>
+            {children}
+          </Sidebar>
+        </UserProvider>
+        {/* </SupabaseProvider> */}
       </body>
     </html>
   )

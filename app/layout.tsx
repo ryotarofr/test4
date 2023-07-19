@@ -21,7 +21,7 @@ import getActiveProductsWithPrices from '../actions/getActiveProductsWithPrices'
 // export const dynamic = 'force-static'
 // export const revalidate = 60
 
-// export const revalidate = 0
+export const revalidate = 0
 
 export default async function RootLayout({
   children,

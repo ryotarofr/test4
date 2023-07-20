@@ -17,8 +17,8 @@ import getActiveProductsWithPrices from '../actions/getActiveProductsWithPrices'
 //   description: 'Welcome to Learn',
 // }
 
-// export const dynamic = 'force-dynamic'
-export const dynamic = 'force-static'
+export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-static'
 export const revalidate = 0
 
 

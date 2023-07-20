@@ -34,12 +34,12 @@ export default async function RootLayout({
       <body>
         {/* <ToasterProvider /> */}
         {/* <SupabaseProvider> */}
-        {/* <UserProvider> */}
-        {/* <ModalProvider products={products} /> */}
-        <Sidebar>
-          {children}
-        </Sidebar>
-        {/* </UserProvider> */}
+        <UserProvider>
+          {/* <ModalProvider products={products} /> */}
+          <Sidebar>
+            {children}
+          </Sidebar>
+        </UserProvider>
         {/* </SupabaseProvider> */}
       </body>
     </html>

@@ -6,7 +6,7 @@ import UserProvider from '../providers/UserProvider'
 import SupabaseProvider from '../providers/SupabaseProvider'
 import ToasterProvider from '../providers/ToasterProvider'
 import ModalProvider from '../providers/ModalProvider'
-import getActiveProductsWithPrices from '../actions/getActiveProductsWithPrices'
+// import getActiveProductsWithPrices from '../actions/getActiveProductsWithPrices'
 
 // import getContentsByUserId from '../actions/getContentsByUserId'
 
@@ -28,7 +28,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const products = await getActiveProductsWithPrices()
+  // const products = await getActiveProductsWithPrices()
 
   return (
     <html lang="en">
@@ -36,7 +36,7 @@ export default async function RootLayout({
         <ToasterProvider />
         {/* <SupabaseProvider> */}
         <UserProvider>
-          <ModalProvider products={products} />
+          {/* <ModalProvider products={products} /> */}
           <Sidebar>
             {children}
           </Sidebar>

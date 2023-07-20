@@ -3,6 +3,8 @@ import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import getPostMetadata from "../../../components/getPostMetadata";
 
+export const dynamic = 'force-static'
+
 const getPostContent = (slug: string) => {
   const folder = "posts/";
   const file = `${folder}${slug}.md`;

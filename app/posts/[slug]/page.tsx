@@ -3,7 +3,9 @@ import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import getPostMetadata from "../../../components/getPostMetadata";
 
-export const dynamic = 'force-static'
+// export const dynamic = 'force-static'
+// export const dynamic = 'force-dynamic'
+export const revalidate = 60
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";

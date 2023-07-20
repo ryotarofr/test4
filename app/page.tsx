@@ -2,7 +2,9 @@ import getPostMetadata from "../components/getPostMetadata";
 import PostPreview from "../components/PostPreview";
 
 export const revalidate = 0
-export const dynamic = 'force-dynamic'
+// 性的ページにはstatic????
+export const dynamic = 'force-static'
+// export const dynamic = 'force-dynamic'
 
 const HomePage = () => {
   const postMetadata = getPostMetadata();

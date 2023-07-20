@@ -5,7 +5,6 @@ import { ProductWithPrice } from "../types";
 import { Database } from "../types_db";
 
 const getActiveProductsWithPrices = async (): Promise<ProductWithPrice[]> => {
-  "use server"
   const supabase = createServerComponentClient<Database>({ cookies })
   
 

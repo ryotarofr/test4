@@ -33,14 +33,14 @@ export default async function RootLayout({
     <html lang="en">
       <body>
         {/* <ToasterProvider /> */}
-        {/* <SupabaseProvider> */}
-        <UserProvider>
-          {/* <ModalProvider products={products} /> */}
-          <Sidebar>
-            {children}
-          </Sidebar>
-        </UserProvider>
-        {/* </SupabaseProvider> */}
+        <SupabaseProvider>
+          <UserProvider>
+            {/* <ModalProvider products={products} /> */}
+            <Sidebar>
+              {children}
+            </Sidebar>
+          </UserProvider>
+        </SupabaseProvider>
       </body>
     </html>
   )

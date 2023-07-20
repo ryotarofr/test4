@@ -1,7 +1,7 @@
 import getPostMetadata from "../components/getPostMetadata";
 import PostPreview from "../components/PostPreview";
 
-// export const revalidate = 60
+export const revalidate = 0
 
 const HomePage = () => {
   const postMetadata = getPostMetadata();
